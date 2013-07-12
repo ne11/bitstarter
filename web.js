@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
   console.log("in get loop");
   var fs = require('fs');
   var bufindex = fs.readFileSync("index.html", "utf-8");
-  response.send(fs.writeFile(bufindex.tostring()));
+  response.send(fs.writeFile(bufindex.toString()));
 });
 
 var port = process.env.PORT || 5000;
